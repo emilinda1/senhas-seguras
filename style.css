@@ -122,6 +122,11 @@ label{
     width: 100%;
     border: 1px solid var(--borda);
 }
+.fraca{
+    height: 30px;
+    width: 25%;
+    background-color: ;
+}
 
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha{

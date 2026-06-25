@@ -106,43 +106,74 @@ body{
     font-size: 24px;
 }
 
-label{
+/* ... código anterior idêntico ... */
+
+label {
     font-size: 20px;
 }
 
-.checkbox{
+.checkbox {
     width: 20px;
     height: 20px;
     cursor: pointer;
 }
 
-.barra{
+/* CORREÇÃO: Alinhamento dos itens de checkbox */
+.parametro-senha-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Cria um espaçamento agradável entre o quadrado e o texto */
+    margin-bottom: 12px;
+}
+
+/* CORREÇÃO: Container da barra para o posicionamento absoluto funcionar */
+.parametro-senha {
+    width: 50%;
+    margin: 0 auto;
+    position: relative; /* Necessário para ancorar a barra de força */
+}
+
+.barra {
     background-color: var(--fundo-senha);
     height: 30px;
     width: 100%;
+    border-radius: 4px; /* Opcional: deixa as bordas mais suaves */
 }
-.fraca{
+
+/* CORREÇÃO: Unificação do comportamento das barras de força */
+.forca {
     height: 30px;
-    width: 25%;
-    background-color:#E71B32;
-    position: relative;
-    bottom: 30px;
+    position: absolute;
+    top: 58px; /* Ajusta a posição exata para cobrir a classe .barra */
+    left: 0;
+    border-radius: 4px;
+    transition: width 0.3s ease; /* Efeito suave quando a força mudar */
 }
-.parametro-senha-textos{
+
+.fraca {
+    width: 25%;
+    background-color: #E71B32;
+}
+
+.media {
+    width: 50%;
+    background-color: #FAF408;
+}
+
+.forte {
+    width: 100%;
+    background-color: #00FF85;
+}
+
+.parametro-senha-textos {
     display: flex;
     justify-content: space-between;
-}
-.media{
-    background-color: #FAF408;
-    width: 50%;
-}
-.forte{
-    background-color: #00FF85;
-    width: 100%;
+    margin-top: 8px; /* Cria um espaço entre a barra e os textos Fraca/Média/Forte */
 }
 
 @media screen and (min-width: 768px) {
-    .parametro-coluna__senha{
+    .parametro-coluna__senha {
         flex-direction: row;
+        gap: 20px; /* Distribui melhor as colunas quando a tela for grande */
     }
 }

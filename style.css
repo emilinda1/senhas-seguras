@@ -12,9 +12,8 @@
 
 * {
     font-weight: 400;
-    box-sizing: border-box; /* Garante que padding não quebre o tamanho dos elementos */
+    box-sizing: border-box; 
 }
-
 body {
     color: var(--branco);
     background-color: var(--cor-de-fundo);
@@ -58,7 +57,7 @@ body {
 .conteudo {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Evita que o conteúdo cole nas bordas em telas menores */
+    padding: 0 20px;
 }
 
 .parametro {
@@ -86,8 +85,8 @@ body {
 }
 
 .parametro-senha {
-    width: 100%; /* Ocupa largura total no mobile por padrão */
-    position: relative; /* Base para o posicionamento absoluto da barra de força */
+    width: 100%;
+    position: relative;
 }
 
 .parametro-senha-botoes {
@@ -116,7 +115,6 @@ label {
     font-size: 20px;
 }
 
-/* Alinhamento dos itens de checkbox */
 .parametro-senha-checkbox {
     display: flex;
     align-items: center;
@@ -130,7 +128,6 @@ label {
     cursor: pointer;
 }
 
-/* Estrutura da barra de força */
 .barra {
     background-color: var(--fundo-senha);
     height: 30px;
@@ -141,7 +138,7 @@ label {
 .forca {
     height: 30px;
     position: absolute;
-    top: 58px; /* Alinha perfeitamente sobre a .barra cinza */
+    top: 58px; 
     left: 0;
     border-radius: 4px;
     transition: width 0.3s ease;
@@ -168,7 +165,6 @@ label {
     margin-top: 8px;
 }
 
-/* Responsividade para telas maiores (Desktop/Tablet) */
 @media screen and (min-width: 768px) {
     .parametro-coluna__senha {
         flex-direction: row;
@@ -176,6 +172,6 @@ label {
     }
 
     .parametro-senha {
-        width: 33%; /* Divide o espaço igualmente entre as 3 colunas */
+        width: 33%; 
     }
 }

@@ -24,8 +24,10 @@ function aumentaTamanho(){
     gerasenha()
 }
 
+const campoSenha = document.querySelector('#campo-senha');
 
 const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVXYWZ';
+gerasenha()
 
 campoSenha.value = letrasMaiusculas;
 
